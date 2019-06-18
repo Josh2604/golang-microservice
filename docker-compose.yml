@@ -1,0 +1,19 @@
+# Docker Compose file
+
+version: "3"
+services:
+  app:
+    container_name: go-mongo
+    restart: always
+    build: ./
+    ports:
+      - "8236:8236"
+    volumes:
+      - .:/app
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27017:27017"

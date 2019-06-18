@@ -16,12 +16,12 @@ import (
 
 // INFO -- ...
 var INFO = &mgo.DialInfo{
-	Addrs:    []string{"127.0.0.1:27017"},
+	Addrs:    []string{"mongo:27017"},
 	Timeout:  60 * time.Second,
 	Database: "goDB",
 	// ? if you have user and password for access to DB
-	// Username: "admin",
-	// Password: "admin",
+	Username: "",
+	Password: "",
 }
 
 // DBNAME - Name For Database Instance
